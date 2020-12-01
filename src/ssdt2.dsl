@@ -5,20 +5,20 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of ssdt2.dat, Fri Nov 20 10:41:27 2020
+ * Disassembly of /kernel/firmware/acpi/ssdt2.aml, Tue Dec  1 14:50:56 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000164 (356)
+ *     Length           0x000001CC (460)
  *     Revision         0x01
- *     Checksum         0xAA
+ *     Checksum         0x2D
  *     OEM ID           "AMD"
  *     OEM Table ID     "PRCSSR17"
  *     OEM Revision     0x00000001 (1)
  *     Compiler ID      "INTL"
- *     Compiler Version 0x20130117 (538116375)
+ *     Compiler Version 0x20190509 (538510601)
  */
-DefinitionBlock ("", "SSDT", 1, "AMD", "PRCSSR17", 0x00000001)
+DefinitionBlock ("", "SSDT", 1, "AMD", "PRCSSR17", 0x00000002)
 {
     Scope (\_PR)
     {

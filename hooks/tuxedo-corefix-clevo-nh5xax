@@ -1,0 +1,39 @@
+#!/bin/sh
+
+PREREQ=""
+
+prereqs()
+{
+    echo "$PREREQ"
+}
+
+case $1 in
+prereqs)
+    prereqs
+    exit 0
+    ;;
+esac
+
+. /usr/share/initramfs-tools/hook-functions
+
+# Begin real processing below this line
+
+WORKDIR=$(mktemp -d "${TMPDIR:-/var/tmp}/mkinitramfs-EFW_XXXXXXXXXX") || {
+    echo "E: tuxedo-corefix-clevo-nh5xax: cannot create temporary directory" >&2
+    exit 1
+}
+ACPIDIR=${WORKDIR}/kernel/firmware/acpi
+DSTFILE=${WORKDIR}/tuxedo-corefix-clevo-nh5xax.cpio
+
+mkdir -p "${ACPIDIR}" && \
+cp /lib/firmware/tuxedo-corefix-clevo-nh5xax/ssdt2.aml ${ACPIDIR}/tuxedo-ssdt2.aml && \
+cd "${WORKDIR}" && \
+find kernel | cpio -H newc -o --quiet > "${DSTFILE}" && \
+prepend_earlyinitramfs "${DSTFILE}" || {
+    # something failed somewhere in that pipeline
+    [ -d "${WORKDIR}" ] && rm -rf "${WORKDIR}"
+    echo "E: tuxedo-corefix-clevo-nh5xax: failed to create or prepend the early initramfs to the initramfs" >&2
+    exit 1
+}
+
+[ -d "${WORKDIR}" ] && rm -rf "${WORKDIR}"
