@@ -27,4 +27,7 @@ if lsinitramfs /boot/initrd.img | grep tuxedo-ssdt2.aml; then
     exit 1
 fi
 
+echo
+echo 'Uninstallation succeeded.'
+
 exit 0

@@ -5,16 +5,16 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /kernel/firmware/acpi/ssdt2.aml, Tue Dec  1 14:50:56 2020
+ * Disassembly of /lib/firmware/tuxedo-corefix-clevo-nh5xax/tuxedo-ssdt2.aml, Thu Dec  3 10:45:33 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
  *     Length           0x000001CC (460)
  *     Revision         0x01
- *     Checksum         0x2D
+ *     Checksum         0x2C
  *     OEM ID           "AMD"
  *     OEM Table ID     "PRCSSR17"
- *     OEM Revision     0x00000001 (1)
+ *     OEM Revision     0x00000002 (2)
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20190509 (538510601)
  */
