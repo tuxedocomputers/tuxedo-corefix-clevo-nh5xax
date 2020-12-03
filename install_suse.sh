@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $(id -u) -ne "0" ]; then
+  echo 'Please run as root'
+  exit 1
+fi
+
 # Check if the device is the correct barebone
 if ! grep -q NH5xAx "/sys/class/dmi/id/board_name"; then
     echo 'THIS DEVICE DOES NOT SEEM TO BE A "Clevo NH5xAx" BAREBONE.'
@@ -54,10 +59,10 @@ fi
 # Install
 mkdir -p /lib/firmware/tuxedo-corefix-clevo-nh5xax/
 cp ssdt2.aml /lib/firmware/tuxedo-corefix-clevo-nh5xax/tuxedo-ssdt2.aml
-cp suse-setup/95-tuxedo-corefix-clevo-nh5xax-suse.conf /etc/dracut.conf.d/
+cp suse-setup/95-tuxedo-corefix-clevo-nh5xax.conf /etc/dracut.conf.d/
 mkinitrd
 
-if ! lsinitramfs /boot/initrd.img | grep tuxedo-ssdt2.aml; then
+if ! lsinitrd /boot/initrd.img | grep -q tuxedo-ssdt2.aml; then
     echo 'Error: Installation failed.' >&2
     exit 1
 fi

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $(id -u) -ne "0" ]; then
+  echo 'Please run as root'
+  exit 1
+fi
+
 # Check if the device is the correct barebone
 if ! grep -q NH5xAx "/sys/class/dmi/id/board_name"; then
     echo 'THIS DEVICE DOES NOT SEEM TO BE A "Clevo NH5xAx" BAREBONE.'
