@@ -15,6 +15,8 @@ Debian/Ubuntu: `sudo ./install_ubuntu.sh`
 OpenSUSE: `sudo ./install_suse.sh`
 
 # Uninstallation
+These scripts must be run from a terminal.
+
 Debian/Ubuntu: `sudo ./uninstall_ubuntu.sh`
 
 OpenSUSE: `sudo ./uninstall_suse.sh`
