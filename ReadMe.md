@@ -8,15 +8,11 @@ This repo supports Debians/Ubuntus update-initramfs script and OpenSUSEs mkinitr
 - acpica-tools (Debian/Ubuntu/OpenSUSE)
 
 # Installation
-Debian/Ubuntu:
-`sudo ./install_ubuntu.sh`
+Debian/Ubuntu: `sudo ./install_ubuntu.sh`
 
-OpenSUSE:
-`sudo ./install_suse.sh`
+OpenSUSE: `sudo ./install_suse.sh`
 
 # Uninstallation
-Debian/Ubuntu:
-`sudo ./uninstall_ubuntu.sh`
+Debian/Ubuntu: `sudo ./uninstall_ubuntu.sh`
 
-OpenSUSE:
-`sudo ./uninstall_suse.sh`
+OpenSUSE: `sudo ./uninstall_suse.sh`
