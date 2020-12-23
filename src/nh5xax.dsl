@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /lib/firmware/tuxedo-corefix-clevo-nh5xax/tuxedo-ssdt2.aml, Thu Dec  3 10:45:33 2020
+ * Disassembly of /lib/firmware/tuxedo-corefix-clevo-nh5xax/nh5xax.aml, Wed Dec 23 11:29:47 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
