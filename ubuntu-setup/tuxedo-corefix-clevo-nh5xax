@@ -48,7 +48,7 @@ ACPIDIR=${WORKDIR}/kernel/firmware/acpi
 DSTFILE=${WORKDIR}/tuxedo-corefix-clevo-nh5xax.cpio
 
 mkdir -p "${ACPIDIR}" && \
-cp /lib/firmware/tuxedo-corefix-clevo-nh5xax/tuxedo-ssdt2.aml "${ACPIDIR}" && \
+cp /lib/firmware/tuxedo-corefix-clevo-nh5xax/nh5xax.aml "${ACPIDIR}" && \
 cd "${WORKDIR}" && \
 find kernel | cpio -H newc -o --quiet > "${DSTFILE}" && \
 prepend_earlyinitramfs "${DSTFILE}" || {

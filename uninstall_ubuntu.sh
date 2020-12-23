@@ -38,7 +38,7 @@ rm -rf /lib/firmware/tuxedo-corefix-clevo-nh5xax/
 rm -rf /etc/initramfs-tools/hooks/tuxedo-corefix-clevo-nh5xax
 update-initramfs -u -k all
 
-if lsinitramfs /boot/initrd.img | grep tuxedo-ssdt2.aml; then
+if lsinitramfs /boot/initrd.img | grep nh5xax.aml; then
     echo 'Error: Uninstallation failed.' >&2
     exit 1
 fi

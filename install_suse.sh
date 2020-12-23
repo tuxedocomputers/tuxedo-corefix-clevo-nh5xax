@@ -64,21 +64,21 @@ fi
 cd $(dirname "$0")
 
 # Build
-iasl src/tuxedo-ssdt2.dsl
-mv src/tuxedo-ssdt2.aml .
+iasl src/nh5xax.dsl
+mv src/nh5xax.aml .
 
-if ! [ -f "tuxedo-ssdt2.aml" ]; then
+if ! [ -f "nh5xax.aml" ]; then
     echo 'Error: Build failed.' >&2
     exit 1
 fi
 
 # Install
 mkdir -p /lib/firmware/tuxedo-corefix-clevo-nh5xax/
-cp tuxedo-ssdt2.aml /lib/firmware/tuxedo-corefix-clevo-nh5xax/
+cp nh5xax.aml /lib/firmware/tuxedo-corefix-clevo-nh5xax/
 cp suse-setup/95-tuxedo-corefix-clevo-nh5xax.conf /etc/dracut.conf.d/
 mkinitrd
 
-if ! lsinitrd | grep -q tuxedo-ssdt2.aml; then
+if ! lsinitrd | grep -q nh5xax.aml; then
     echo 'Error: Installation failed.' >&2
     exit 1
 fi

@@ -64,21 +64,21 @@ fi
 cd $(dirname "$0")
 
 # Build
-iasl src/tuxedo-ssdt2.dsl
-mv src/tuxedo-ssdt2.aml .
+iasl src/nh5xax.dsl
+mv src/nh5xax.aml .
 
-if ! [ -f "tuxedo-ssdt2.aml" ]; then
+if ! [ -f "nh5xax.aml" ]; then
     echo 'Error: Build failed.' >&2
     exit 1
 fi
 
 # Install
 mkdir -p /lib/firmware/tuxedo-corefix-clevo-nh5xax/
-cp tuxedo-ssdt2.aml /lib/firmware/tuxedo-corefix-clevo-nh5xax/
+cp nh5xax.aml /lib/firmware/tuxedo-corefix-clevo-nh5xax/
 cp ubuntu-setup/tuxedo-corefix-clevo-nh5xax /etc/initramfs-tools/hooks/
 update-initramfs -u -k all
 
-if ! lsinitramfs /boot/initrd.img | grep -q tuxedo-ssdt2.aml; then
+if ! lsinitramfs /boot/initrd.img | grep -q nh5xax.aml; then
     echo 'Error: Installation failed.' >&2
     exit 1
 fi
