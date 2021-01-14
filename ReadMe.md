@@ -5,7 +5,7 @@ The Clevo NH5xAx barebone has a bug, that causes cpufreq to not work on core 25-
 
 This repo supports Debians/Ubuntus update-initramfs script and OpenSUSEs mkinitrd/dracut script to patch the default initrd.img. Some distros, for example Arch, have other initrd.img build scripts. This repo will not work for these. Note that when you repack this fix for these distros, that the compiled aml file needs to be in an uncompressed section in the start of the initrd.img.
 
-Author: Werner Sembach <wse@tuxedocomputers.com>
+Author: Werner Sembach <tux@tuxedocomputers.com>
 
 # Requirements
 - initramfs-tools (Debian/Ubuntu) respectively dracut (OpenSUSE)
