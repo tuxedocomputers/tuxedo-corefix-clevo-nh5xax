@@ -23,11 +23,11 @@ fi
 
 # Check if the device is the correct barebone
 if ! grep -q NH5xAx "/sys/class/dmi/id/board_name"; then
-    echo 'THIS DEVICE DOES NOT SEEM TO BE A "TUXEDO XA15" OR ANOTHER DEVICE BASED ON A "Clevo NH5xAx" BAREBONE.'
+    echo 'THIS DEVICE DOES NOT SEEM TO BE A "TUXEDO BOOK XA15" OR ANOTHER DEVICE BASED ON A "Clevo NH5xAx Barebone".'
 fi
 
 # Warn the user and give him a last change to escape
-echo 'THIS FIX MUST NOT BE INSTALLED ON ANYTHING ELSE THAN A "TUXEDO XA15" OR ANOTHER DEVICE BASED ON A "Clevo NH5xAx" BAREBONE!'
+echo 'THIS FIX MUST NOT BE INSTALLED ON ANYTHING ELSE THAN A "TUXEDO BOOK XA15" OR ANOTHER DEVICE BASED ON A "Clevo NH5xAx Barebone"!'
 read -r -p "Only continue if you know what you are doing. Continue? [y/n]: " INPUT
  
 case $INPUT in
