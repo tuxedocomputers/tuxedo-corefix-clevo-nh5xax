@@ -1,5 +1,7 @@
 # About
-**DO NOT INSTALL THIS ON A TUXEDO BOOK XA15 OR CLEVO NH5xAx IF YOU ARE USING TUXEDO-TOMTE AS IT WILL HAVE ALREADY APPLIED THIS PATCH AUTOMATICALLY.**
+**THIS FIX IS ONLY FOR THE "TUXEDO BOOK XA15" OR OTHER "CLEVO NH5xAx Barebone" BASED DEVICES.**
+
+**DO NOT INSTALL IF YOU ARE USING TUXEDO-TOMTE AS IT WILL HAVE ALREADY APPLIED THIS PATCH AUTOMATICALLY.**
 
 The Clevo NH5xAx barebone has a bug, that causes cpufreq to not work on core 25-32 when a Ryzen 9 3950x is installed. This repo replaces the broken ssdt2 ACPI table, causing this bug, during boot. To archive this it uses the initramfs method (https://www.kernel.org/doc/html/v5.6/admin-guide/acpi/ssdt-overlays.html).
 
